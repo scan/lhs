@@ -48,6 +48,12 @@ describe LHS::Record do
         }.to_json)
     end
 
+    it 'casts subrecords' do
+      favorite = Favorite.includes([:local_entry, :user]).find(1)
+      expect(favorite.user).to be_kind_of(User)
+      expect(favorite.local_entry).to be_kind_of(LocalEntry)
+    end
+
     it 'includes a resource' do
       favorite = Favorite.includes(:local_entry).find(1)
       expect(favorite.local_entry.company_name).to eq 'local.ch'
