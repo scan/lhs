@@ -1,2 +1,4 @@
-include:
-  - cider-ci/jobs/abort_and_retry.yml
+jobs:
+  include:
+    - cider-ci/jobs/rubocop.yml
+    - cider-ci/jobs/rspec.yml
