@@ -43,6 +43,6 @@ rspec:
           include-match: tmp\/capybara\/.*\.html$
           content-type: text/html
 
-    _cider-ci_generate-tasks:
+    generate_tasks:
       include-match: spec/.*_spec.rb
       exclude-match: spec/support/shared/*
