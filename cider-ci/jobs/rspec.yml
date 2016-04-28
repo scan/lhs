@@ -25,7 +25,7 @@ rspec:
             - script: tmp-cache
 
 
-        _cider-ci_include:
+        include:
           - cider-ci/scripts/bundle.yml
           - cider-ci/scripts/tmp-cache.yml
           - cider-ci/scripts/ruby-version.yml
