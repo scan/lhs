@@ -1,10 +1,5 @@
 rspec:
   name: 'RSPec tests'
-
-  run-on:
-    - type: branch
-      include-match: ^.*$
-
   context:
     task-defaults:
       ports:
@@ -24,13 +19,11 @@ rspec:
             - script: ruby-version
             - script: tmp-cache
 
-
         include:
           - cider-ci/scripts/bundle.yml
           - cider-ci/scripts/tmp-cache.yml
           - cider-ci/scripts/ruby-version.yml
           - cider-ci/scripts/rspec.yml
-
 
       trial-attachments:
         logs:
