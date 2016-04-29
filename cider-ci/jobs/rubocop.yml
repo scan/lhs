@@ -15,7 +15,6 @@ rubocop:
         rubocop:
           start-when:
             - script: bundle
-            - script: ruby-version
             - script: tmp-cache
 
         
@@ -28,7 +27,6 @@ rubocop:
         include:
           - cider-ci/scripts/bundle.yml
           - cider-ci/scripts/tmp-cache.yml
-          - cider-ci/scripts/ruby-version.yml
           - cider-ci/scripts/rubocop.yml
           
           - cider-ci/scripts/github_comment.yml

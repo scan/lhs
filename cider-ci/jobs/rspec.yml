@@ -27,7 +27,6 @@ rspec:
           - cider-ci/scripts/ruby.yml
           - cider-ci/scripts/bundle.yml
           - cider-ci/scripts/tmp-cache.yml
-          - cider-ci/scripts/ruby-version.yml
 
       trial-attachments:
         logs:
