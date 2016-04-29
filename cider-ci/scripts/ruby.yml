@@ -1,5 +1,4 @@
 ruby:
-  exclusive-executor-resource: ruby
   timeout: 20 Minutes
   environment-variables:
     RBENV_VERSION: 2.1.0
