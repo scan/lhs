@@ -9,7 +9,6 @@ ruby:
     eval "$(rbenv init -)"
     echo "$(rbenv versions)"
     echo "$(rbenv version)"
-    echo "RBENV_VERSION $(RBENV_VERSION)"
     if [ ! -d ${HOME}/.rbenv/versions/${RBENV_VERSION} ]; then
       rbenv install ${RBENV_VERSION}
     fi
