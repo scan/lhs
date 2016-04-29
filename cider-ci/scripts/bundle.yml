@@ -9,7 +9,6 @@ bundle:
       rbenv install ${RBENV_VERSION}
       gem install bundler
     fi
-    cd user-interface
     rm .bundle/config
     sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile
     bundle
