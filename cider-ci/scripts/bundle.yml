@@ -1,3 +1,14 @@
 bundle:
   exclusive-executor-resource: bundler
-  body: sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile && bundle install
+  body: 
+    #!/usr/bin/env bash
+    export PATH=~/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+    if [ ! -d ${HOME}/.rbenv/versions/${RBENV_VERSION} ]; then
+      rbenv install ${RBENV_VERSION}
+      gem install bundler
+    fi
+    cd user-interface
+    rm .bundle/config
+    sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile
+    bundle
