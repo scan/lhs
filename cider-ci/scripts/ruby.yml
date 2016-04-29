@@ -1,0 +1,11 @@
+ruby:
+  exclusive-executor-resource: rbenv
+  timeout: 20 Minutes
+  body: |
+    #!/usr/bin/env bash
+    export PATH=~/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+    if [ ! -d ${HOME}/.rbenv/versions/${RBENV_VERSION} ]; then
+      rbenv install ${RBENV_VERSION}
+    fi
+    gem install bundler

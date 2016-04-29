@@ -1,13 +1,8 @@
 bundle:
-  exclusive-executor-resource: bundler
-  timeout: 20 Minutes
+  exclusive-executor-resource: bundle
+  timeout: 10 Minutes
+  start-when:
+    - script: ruby
   body: |
-    #!/usr/bin/env bash
-    export PATH=~/.rbenv/bin:$PATH
-    eval "$(rbenv init -)"
-    if [ ! -d ${HOME}/.rbenv/versions/${RBENV_VERSION} ]; then
-      rbenv install ${RBENV_VERSION}
-    fi
     sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile
-    gem install bundler
     bundle
