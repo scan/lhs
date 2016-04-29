@@ -5,4 +5,5 @@ bundle:
     - script: ruby
   body: |
     sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile
+    echo $(which bundle)
     bundle
