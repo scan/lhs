@@ -21,7 +21,6 @@ rspec:
         rspec:
           start-when:
             - script: bundle
-            - script: ruby-version
             - script: tmp-cache
 
         include:
@@ -29,7 +28,6 @@ rspec:
           - cider-ci/scripts/bundle.yml
           - cider-ci/scripts/tmp-cache.yml
           - cider-ci/scripts/ruby-version.yml
-          - cider-ci/scripts/rspec.yml
 
       trial-attachments:
         logs:

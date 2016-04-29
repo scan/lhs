@@ -12,3 +12,4 @@ ruby:
       gem install bundler
     fi
     rbenv local ${RBENV_VERSION}
+    ruby --version
