@@ -6,7 +6,7 @@ rspec:
       include-match: ^.*$
 
   context:
-    task-defaults:
+    task_defaults:
       ports:
         CAPYBARA_PORT:
           inet_address: "localhost"
