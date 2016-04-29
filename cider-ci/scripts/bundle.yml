@@ -1,6 +1,7 @@
 bundle:
   exclusive-executor-resource: bundler
-  body: 
+  timeout: 20 Minutes
+  body: |
     #!/usr/bin/env bash
     export PATH=~/.rbenv/bin:$PATH
     eval "$(rbenv init -)"
