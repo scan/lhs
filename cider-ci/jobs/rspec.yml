@@ -20,7 +20,7 @@ rspec:
       scripts:
         rspec:
           start-when:
-            - script: bundle
+            - script: ruby
             - script: tmp-cache
 
         include:
