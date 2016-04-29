@@ -7,7 +7,7 @@ bundle:
     eval "$(rbenv init -)"
     if [ ! -d ${HOME}/.rbenv/versions/${RBENV_VERSION} ]; then
       rbenv install ${RBENV_VERSION}
-      gem install bundler
     fi
     sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile
+    gem install bundler
     bundle
