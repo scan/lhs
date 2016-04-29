@@ -25,7 +25,7 @@ rubocop:
         
 
         include:
-          - cider-ci/scripts/bundle.yml
+          - cider-ci/scripts/ruby.yml
           - cider-ci/scripts/tmp-cache.yml
           - cider-ci/scripts/rubocop.yml
           

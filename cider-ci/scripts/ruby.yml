@@ -1,5 +1,5 @@
 ruby:
-  exclusive-executor-resource: rbenv
+  exclusive-executor-resource: ruby
   timeout: 20 Minutes
   environment-variables:
     RBENV_VERSION: 2.1.0
@@ -13,3 +13,8 @@ ruby:
     fi
     rbenv local ${RBENV_VERSION}
     ruby --version
+    export PATH=~/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+    sed 's/^source.*/source "http\:\/\/52.29.7.59:9292"/g' Gemfile > Gemfile.tmp ; mv Gemfile.tmp Gemfile
+    echo $(rbenv which bundle)
+    $(rbenv which bundle)
