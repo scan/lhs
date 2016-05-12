@@ -16,6 +16,7 @@ class LHS::Record
   include Request
   include Where
   include Pagination
+  include PaginationQueries
 
   delegate :_proxy, to: :_data
   delegate :_endpoint, to: :_data
