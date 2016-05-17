@@ -8,7 +8,7 @@ class LHS::Record
     module ClassMethods
       def page(page)
         pagination = pagination_class.new(pagination_key => page)
-        where(pagination_key => page)
+        where(pagination_key => pagination.page_to_offset(page))
       end
 
       def limit(limit)

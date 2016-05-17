@@ -11,7 +11,7 @@ describe LHS::Record do
 
     it 'provides chainable pagination methods' do
       Record.page(1) # offset 100
-      Record.page(2).limit(10) # offset 20 
+      # Record.page(2).limit(10) # offset 20
     end
   end
 end

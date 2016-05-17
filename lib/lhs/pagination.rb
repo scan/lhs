@@ -74,6 +74,10 @@ class PagePagination < Pagination
     current_page + 1
   end
 
+  def page_to_offset(page, limit)
+    page
+  end
+
 end
 
 class StartPagination < Pagination
@@ -84,6 +88,10 @@ class StartPagination < Pagination
 
   def next_offset
     offset + limit
+  end
+
+  def self.page_to_offset(page, limit)
+    page
   end
 
 end
@@ -98,4 +106,7 @@ class OffsetPagination < Pagination
     offset + limit
   end
 
+  def self.page_to_offset(page, limit)
+    page
+  end
 end
