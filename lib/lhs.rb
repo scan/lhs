@@ -5,6 +5,10 @@ end
 
 Gem.find_files('lhs/**/*.rb').sort.each { |path| require path }
 
+module LHS
+  include Apply
+end
+
 # Preload all the LHS::Records that are defined in app/models
 class Engine < Rails::Engine
   initializer 'Load all LHS::Records from app/models/**' do |app|
